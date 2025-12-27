@@ -3,6 +3,14 @@ const app = express();
 
 app.use(express.json()); // MUST be first
 
+
+const cors = require("cors");
+
+app.use(cors()); // ✅ allow frontend requests
+app.use(express.json());
+
+
+
 /* -------------------- In-memory DB -------------------- */
 let patients = [];
 let idCounter = 1;
@@ -40,10 +48,10 @@ function validatePatient(req, res, next) {
       .status(400)
       .json({ message: "DOB must not be greater than current date" });
 
-  if (!phone || !/^[89]\d{9}$/.test(phone))
+  if (!phone || !/^[6-9]\d{9}$/.test(phone))
     return res
       .status(400)
-      .json({ message: "Phone must be 10 digits and start with 8 or 9" });
+      .json({ message: "Phone must be 10 digits and start with 8 to 9" });
 
   const fullNameExists = patients.some(
     (p) =>
@@ -165,9 +173,9 @@ function validatePatient(req, res, next) {
 
   /* ---------- Phone ---------- */
   if (!isPatch || phone !== undefined) {
-    if (!phone || !/^[89]\d{9}$/.test(phone)) {
+    if (!phone || !/^[6-9]\d{9}$/.test(phone)) {
       return res.status(400).json({
-        message: "Phone must be 10 digits and start with 8 or 9",
+        message: "Phone must be 10 digits and start with 6 to 9",
       });
     }
   }
@@ -231,7 +239,6 @@ app.patch("/patients/:id", validatePatient, (req, res) => {
     data: patients[index],
   });
 });
-
 
 /* -------------------- DELETE -------------------- */
 app.delete("/patients/:id", (req, res) => {
