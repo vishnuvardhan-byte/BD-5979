@@ -1,0 +1,107 @@
+/* ===============================
+   Patient List – Scoped Styling
+   =============================== */
+
+.patient-list {
+  margin-top: 30px;
+}
+
+/* Section Title */
+.patient-list h3 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Table Wrapper */
+.patient-list table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.patient-list thead {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+
+.patient-list th {
+  padding: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: left;
+}
+
+/* Body Cells */
+.patient-list td {
+  padding: 12px;
+  font-size: 0.9rem;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Zebra Rows */
+.patient-list tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Hover Effect */
+.patient-list tbody tr:hover {
+  background-color: #eef2ff;
+  transition: background-color 0.25s ease;
+}
+
+/* Actions Column */
+.patient-list td:last-child {
+  display: flex;
+  gap: 8px;
+}
+
+/* Buttons (Scoped) */
+.patient-list button {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Edit Button */
+.patient-list button:first-child {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+.patient-list button:first-child:hover {
+  background-color: #059669;
+  transform: translateY(-1px);
+}
+
+/* Delete Button */
+.patient-list button:last-child {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+.patient-list button:last-child:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .patient-list table {
+    font-size: 0.85rem;
+  }
+
+  .patient-list td:last-child {
+    flex-direction: column;
+  }
+}

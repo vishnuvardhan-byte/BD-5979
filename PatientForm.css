@@ -1,0 +1,143 @@
+/* ===============================
+   Patient Form – Elite UI
+   =============================== */
+
+form {
+  max-width: 1050px;
+  margin: 28px auto;
+  padding: 26px 30px;
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+  border-radius: 16px;
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 22px;
+  row-gap: 18px;
+}
+
+/* ===============================
+   Title
+   =============================== */
+
+form h3 {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: 0.3px;
+  margin-bottom: 6px;
+}
+
+/* ===============================
+   Inputs & Select
+   =============================== */
+
+form input,
+form select {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  border: 1.6px solid #d1d5db;
+  background: #ffffff;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+/* Prevent overlap */
+form input,
+form select {
+  box-sizing: border-box;
+}
+
+/* Hover */
+form input:hover,
+form select:hover {
+  border-color: #94a3b8;
+}
+
+/* Focus */
+form input:focus,
+form select:focus {
+  border-color: #2563eb;
+  box-shadow:
+    0 0 0 4px rgba(37, 99, 235, 0.15),
+    0 6px 14px rgba(37, 99, 235, 0.1);
+}
+
+/* Placeholder */
+form input::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+/* Select cursor */
+form select {
+  cursor: pointer;
+}
+
+/* ===============================
+   Button (NOT FULL WIDTH)
+   =============================== */
+
+form button {
+  grid-column: 1 / 2; /* left aligned */
+  justify-self: start;
+  margin-top: 6px;
+
+  padding: 11px 26px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.35);
+}
+
+/* Active */
+form button:active {
+  transform: scale(0.96);
+}
+
+/* ===============================
+   Responsive Design
+   =============================== */
+
+@media (max-width: 900px) {
+  form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  form button {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 520px) {
+  form {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+
+  form button {
+    justify-self: stretch;
+    text-align: center;
+  }
+}

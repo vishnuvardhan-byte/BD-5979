@@ -1,0 +1,115 @@
+/* ===============================
+   Patient List – Clean & Elegant
+   =============================== */
+
+/* Container spacing */
+div {
+  margin-top: 30px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* Title */
+h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Table Header */
+thead {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+
+th {
+  padding: 12px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: none;
+}
+
+/* Table Body */
+td {
+  padding: 12px;
+  font-size: 0.95rem;
+  color: #374151;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Zebra striping */
+tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Hover effect */
+tbody tr:hover {
+  background-color: #eef2ff;
+  transition: background 0.25s ease;
+}
+
+/* Buttons */
+button {
+  padding: 6px 12px;
+  margin: 0 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Edit Button (first button) */
+td button:first-child {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+td button:first-child:hover {
+  background-color: #1e40af;
+  transform: translateY(-1px);
+}
+
+/* Delete Button (second button) */
+td button:last-child {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+td button:last-child:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+}
+
+/* Button active */
+button:active {
+  transform: scale(0.97);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  th,
+  td {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+}

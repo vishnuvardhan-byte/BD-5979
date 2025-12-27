@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form input,
+.form select,
+.form button {
+  padding: 8px;
+}
+
+.form button {
+  grid-column: span 3;
+  background: #007bff;
+  color: white;
+  border: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+button {
+  margin: 2px;
+  padding: 5px 10px;
+}
+
+button.danger {
+  background: red;
+  color: white;
+}
+
+.message {
+  text-align: center;
+  color: green;
+}
